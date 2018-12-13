@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@import "font";
+%base-font-falmily {
+  font-family: PingFangSC-Regular, "Microsoft Yahei", 宋体, Tahoma, Verdana, sans-serif, simsun, Arial;
+}
+@mixin clearfix {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix {
+  @include clearfix();
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  @extend %base-font-falmily;
+}
+
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+}
+textarea,
+input,
+select {
+  vertical-align: middle;
+  resize: none;
+  outline: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
